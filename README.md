@@ -1,4 +1,5 @@
 # customer-churn-classification
+(Español al final)
 
 ## Business Problem 
 
@@ -82,5 +83,72 @@ Develop a classification model to identify customers with a high probability of 
    - Are there specific products or services associated with higher cancellation rates?
 
 4. From a managerial perspective, these analytical tools and recommendations can provide significant value to the marketing department when designing targeted retention campaigns and strengthening customer relationship strategies.
+
+
+# Problema de Negocio
+
+La empresa de telecomunicaciones Telecom necesita determinar la probabilidad de que un cliente cancele su suscripción al portafolio de servicios que actualmente tiene con la compañía, con el fin de ofrecer promociones y planes especiales a los usuarios con riesgo de fuga.
+
+## Objetivos
+
+Desarrollar un modelo de clasificación para identificar clientes con alta probabilidad de abandono. El modelo está diseñado para proporcionar información clara y accionable que ayude al equipo de marketing a tomar decisiones basadas en datos y crear estrategias efectivas de retención de clientes.
+
+## Tecnologías Utilizadas
+### Lenguaje de Programación
+- Python
+- Análisis de Datos
+- Pandas
+- NumPy
+- Machine Learning
+- Scikit-learn
+- CatBoost
+- LightGBM
+- 
+### Visualización de Datos
+- Matplotlib
+- Seaborn
+
+### Herramientas de Desarrollo
+- Jupyter Notebook
+- VS Code
+- Git
+- GitHub
   
+### Metodología 
+
+1. Carga de Datos y Exploración Inicial
+- Se cargó el conjunto de datos y se exploró su estructura, variables y valores faltantes.
+2. Preprocesamiento de Datos
+- Limpieza y transformación de datos inconsistentes.
+3. Manejo de valores nulos.
+- Estandarización del formato de texto.
+4. Corrección de tipos de datos.
+- Organización de la información en tablas estructuradas.
+5. Análisis Exploratorio de Datos (EDA)
+- Análisis de patrones, correlaciones y comportamiento de los clientes.
+- Creación de visualizaciones para identificar tendencias e insights.
+6. Ingeniería de Características
+- Creación de una nueva variable (tenure_days) para determinar la antigüedad del cliente.
+7. Entrenamiento y Evaluación del Modelo
+- Entrenamiento de múltiples modelos de machine learning.
+- Evaluación del desempeño utilizando métricas de clasificación.
+
+##  Conclusiones
+
+- Se abordó el desbalance de clases (26% vs. 74%) utilizando hiperparámetros nativos de los modelos, como scale_pos_weight y auto_class_weights, en lugar de técnicas de sobremuestreo sintético, reduciendo el riesgo de sobreajuste y preservando la distribución original de los datos.
+- Los valores faltantes y los datos inconsistentes fueron tratados durante el preprocesamiento para mejorar la calidad de los datos y la confiabilidad del modelo.
+- La ingeniería de características desempeñó un papel fundamental en el rendimiento del modelo. En particular, la creación de la variable Antigüedad del Cliente en Días ayudó a identificar patrones importantes de churn en clientes de larga permanencia con altos cargos acumulados.
+- CatBoost fue seleccionado como el modelo con mejor desempeño debido a su superior AUC-ROC (93%) y F1-Score (78%), demostrando una fuerte capacidad predictiva y un rendimiento equilibrado en la clasificación.
+- El modelo final alcanzó un Recall del 81%, permitiendo detectar aproximadamente 8 de cada 10 clientes en riesgo de abandono antes de la cancelación, facilitando estrategias de retención proactivas.
+  
+## Insights Estratégicos de Negocio
+- Identificar clientes con alta probabilidad de abandono para desarrollar estrategias de retención dirigidas, como promociones personalizadas y programas de fidelización.
+- Una vez identificados los clientes de alto riesgo, analizar su nivel de compromiso con la empresa, incluyendo los paquetes de servicios que utilizan actualmente, y evaluar oportunidades para adaptar productos o planes según su perfil y necesidades.
+- Analizar con mayor profundidad los patrones de churn para comprender mejor las principales causas de abandono de clientes. Por ejemplo:
+¿Los clientes están migrando hacia la competencia?
+¿La calidad del servicio influye en la probabilidad de churn?
+¿Existen productos o servicios específicos asociados con mayores tasas de cancelación?
+- Desde una perspectiva gerencial, estas herramientas analíticas y recomendaciones pueden aportar un valor significativo al departamento de marketing en el diseño de campañas de retención dirigidas y en el fortalecimiento de las estrategias de relación con los clientes.
+
+
   
